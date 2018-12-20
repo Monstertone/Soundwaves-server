@@ -1,8 +1,10 @@
+
+
 module.exports = {
   development: {
       client: 'pg',
       connection: {
-        database: "users",
+        database: "swdb",
         host: "localhost"
       },
       migrations: {
