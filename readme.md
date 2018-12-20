@@ -1,3 +1,3 @@
-## Node/Knex MVC Template
+## Soundwaves server
 
-To start using this simply clone it and do npm install.
+this is the Node.js, Express and knex server for Soundwaves API.
