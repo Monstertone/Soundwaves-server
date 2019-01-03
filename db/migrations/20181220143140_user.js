@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('user', (table)=>{
     table.increments();
     table.string('username')
+         .unique()
          .notNullable();
     table.string('user_type');
     table.string('email')
@@ -13,7 +14,7 @@ exports.up = function(knex, Promise) {
     table.date('birth_date')
          .notNullable();
     table.string('gender');
-    table.binary('share_info');
+    table.boolean('share_info');
     table.timestamps(true, true);
   });
 };
