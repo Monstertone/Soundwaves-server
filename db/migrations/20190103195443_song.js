@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
           .index();
     table.string('title');
     table.string('album');
-    table.string('ogg_url');
+    table.string('url');
     table.string('album_art');
     table.timestamps(true, true);
   });
