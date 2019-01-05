@@ -1,4 +1,5 @@
 const users = require("../controllers/users.js")
+const songs = require("../controllers/songs.js")
 const jwt = require('jsonwebtoken');
 const secret = process.env.JWT_SECRET || 'secret';
 
@@ -9,6 +10,9 @@ module.exports = function(app){
   app.post('/sessions', users.login);
 
   app.use(verifyToken);
+
+
+  app.get('/songs', songs.retrieve);
 
 }
 
