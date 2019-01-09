@@ -5,6 +5,8 @@ const secret = process.env.JWT_SECRET || 'secret';
 
 module.exports = function(app){
 
+   app.get('/stream/:city', songs.stream);
+
   app.post('/users', users.create);
 
   app.post('/sessions', users.login);
@@ -12,7 +14,9 @@ module.exports = function(app){
   app.use(verifyToken);
 
 
-  app.get('/songs', songs.retrieve);
+  app.get('/songs', songs.ordered);
+
+  app.get('/random', songs.random);
 
 }
 
